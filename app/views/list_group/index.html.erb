@@ -1,0 +1,15 @@
+<h2>With component</h2>
+<!-- start component -->
+<%= render(ListGroupComponent.new) do |component| %>
+  <% component.with(:item) { "#1 List Item" } %>
+<% end %>
+<!-- end component -->
+
+<h2 class="mt-4">Loop</h2>
+<!-- start component -->
+<%= render(ListGroupComponent.new) do %>
+  <% (1..10).each do |n| %>
+    <%= render(ListGroupItemComponent.new(txt: "##{n} List Item")) %>
+  <% end %>
+<% end %>
+<!-- end component -->

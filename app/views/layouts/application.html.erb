@@ -8,6 +8,8 @@
     <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
   </head>
   <body>
-    <%= yield %>
+    <%= render(ContainerComponent.new) do %>
+      <%= yield %>
+    <% end %>
   </body>
 </html>

@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.0"
 
+gem "actionview-component", "~> 1.15.0"
 gem "bootsnap", ">= 1.4.2", require: false
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

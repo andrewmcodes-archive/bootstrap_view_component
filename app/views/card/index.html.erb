@@ -1,0 +1,49 @@
+<h2>Default</h2>
+<!-- start component -->
+<%= render(CardComponent.new) do |component| %>
+  <% component.with(:title) do %>
+    <%= render(CardTitleComponent.new(title: "Default Title")) %>
+  <% end %>
+  <% component.with(:subtitle) do %>
+    <%= render(CardSubtitleComponent.new(subtitle: "Default subtitle")) %>
+  <% end %>
+  <% component.with(:body) do %>
+    <%= render(CardBodyComponent.new(body: "Default body")) %>
+  <% end %>
+  <% component.with(:footer) do %>
+    <small class="text-muted">Last updated 3 mins ago</small>
+  <% end %>
+<% end %>
+<!-- end component -->
+
+<h2 class="mt-4">Complex</h2>
+
+<!-- start component -->
+<%= render(CardComponent.new(styles: "width: 50vw")) do |component| %>
+  <% component.with(:title) do %>
+    <%= render CardTitleComponent.new do %>
+      <h5 class="card-title">Complex title</h5>
+      <p class="card-text">TITLE COMPONENT: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <% end %>
+  <% end %>
+  <% component.with(:body) do %>
+    <%= render CardBodyComponent.new do %>
+      <p class="card-text">BODY COMPONENT: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text">BODY COMPONENT: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <% end %>
+  <% end %>
+<% end %>
+<!-- end component -->
+
+<h2 class="mt-4">Image</h2>
+
+<!-- start component -->
+<%= render CardComponent.new(styles: "width: 18rem;", image_path: "https://via.placeholder.com/150", image_alt: "placeholder") do |component| %>
+  <%= component.with(:title) { "Seconday Title" } %>
+  <%= component.with(:subtitle) { "Secondary Subtitle" } %>
+  <%= component.with(:body) { "Secondary Body" } %>
+  <% component.with(:footer) do %>
+    <small class="text-muted">Last updated 3 mins ago</small>
+  <% end %>
+<% end %>
+<!-- end component -->

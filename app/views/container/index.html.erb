@@ -1,0 +1,11 @@
+<!-- start component -->
+<%= render(ContainerComponent.new) do %>
+  <%= render(ExampleComponent.new(title: "Container Component")) %>
+<% end %>
+<!-- end component -->
+
+<!-- start component -->
+<%= render(ContainerComponent.new(classes: "container border border-primary")) do %>
+  <%= render(ExampleComponent.new(title: "Container Component", content: "with border for visualizing")) %>
+<% end %>
+<!-- end component -->

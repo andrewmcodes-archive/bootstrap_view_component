@@ -1,0 +1,23 @@
+<div class="card" style="<%= styles %>">
+  <% if image? %>
+    <img src="<%= image_path %>" class="card-img-top" alt="<%= image_alt %>">
+  <% end %>
+  <div class="card-body">
+    <% if title %>
+      <%= title %>
+    <% end %>
+
+    <% if subtitle %>
+      <%= subtitle %>
+    <% end %>
+
+    <% if body %>
+      <%= body %>
+    <% end %>
+  </div>
+  <% if footer %>
+    <div class="card-footer">
+      <%= footer %>
+    </div>
+  <% end %>
+</div>
