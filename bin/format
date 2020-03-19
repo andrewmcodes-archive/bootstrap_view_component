@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "== StandardRb =="
+bundle exec standardrb --fix
+echo "== ERB Lint =="
+bundle exec erblint --autocorrect app/views/**/*.html.erb
+echo "== Prettier-Standard =="
+yarn run prettier:format

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "== StandardRb =="
+bundle exec standardrb --format progress
+echo "== ERB Lint =="
+bundle exec erblint app/views/**/*.html.erb
+echo "== Prettier-Standard =="
+yarn run prettier:check

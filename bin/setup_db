@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "== Setting Up Database =="
+bundle exec rails db:create db:migrate db:seed
