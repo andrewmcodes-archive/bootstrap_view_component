@@ -2,13 +2,13 @@
 <!-- start component -->
 <%= render(CardComponent.new) do |component| %>
   <% component.with(:title) do %>
-    <%= render(CardTitleComponent.new(title: "Default Title")) %>
+    <%= render(Card::TitleComponent.new(title: "Default Title")) %>
   <% end %>
   <% component.with(:subtitle) do %>
-    <%= render(CardSubtitleComponent.new(subtitle: "Default subtitle")) %>
+    <%= render(Card::SubtitleComponent.new(subtitle: "Default subtitle")) %>
   <% end %>
   <% component.with(:body) do %>
-    <%= render(CardBodyComponent.new(body: "Default body")) %>
+    <%= render(Card::BodyComponent.new(body: "Default body")) %>
   <% end %>
   <% component.with(:footer) do %>
     <small class="text-muted">Last updated 3 mins ago</small>
@@ -21,13 +21,13 @@
 <!-- start component -->
 <%= render(CardComponent.new(styles: "width: 50vw")) do |component| %>
   <% component.with(:title) do %>
-    <%= render CardTitleComponent.new do %>
+    <%= render Card::TitleComponent.new do %>
       <h5 class="card-title">Complex title</h5>
       <p class="card-text">TITLE COMPONENT: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     <% end %>
   <% end %>
   <% component.with(:body) do %>
-    <%= render CardBodyComponent.new do %>
+    <%= render Card::BodyComponent.new do %>
       <p class="card-text">BODY COMPONENT: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       <p class="card-text">BODY COMPONENT: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     <% end %>
